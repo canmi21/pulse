@@ -1,9 +1,7 @@
 name: Rust Build and Release
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
 
 jobs:
   build-and-release:
