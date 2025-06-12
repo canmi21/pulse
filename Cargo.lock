@@ -255,7 +255,7 @@ dependencies = [
 
 [[package]]
 name = "pulse"
-version = "0.1.3"
+version = "0.1.5"
 dependencies = [
  "auto-launch",
  "base64",
