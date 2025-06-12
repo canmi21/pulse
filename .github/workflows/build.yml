@@ -1,4 +1,4 @@
-name: Rust Build and Release
+name: Rust Build
 
 on:
   workflow_dispatch:
@@ -12,9 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Rust
-        uses: actions/setup-rust@v1
-        with:
-          rust-version: stable
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Get version from Cargo.toml
         id: version
