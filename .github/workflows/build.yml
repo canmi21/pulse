@@ -35,6 +35,14 @@ jobs:
           cd target/release
           zip -r "${{ steps.version.outputs.version }}.zip" "Pulse.app"
 
+      - name: Delete existing release and tag if any
+        run: |
+          gh release delete "v${{ steps.version.outputs.version }}" -y || true
+          git tag -d "v${{ steps.version.outputs.version }}" || true
+          git push origin :refs/tags/v${{ steps.version.outputs.version }} || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
