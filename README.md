@@ -1,5 +1,5 @@
 ### Pulse
-A minimal macOS utility app with resource images.
+A minimal macOS utility application is similar in functionality to eul and istate.
 
 ### Usage
 
